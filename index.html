@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Conselhinho</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conselhinho do Dia</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+    }
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bem-vindo ao Conselhinho!</h1>
-  <p>Este é o meu site publicado no GitHub Pages.</p>
+  <div class="card">
+    <h1>🧠 Conselhinho do Dia</h1>
+    <p id="conselho">Clique no botão para receber um conselho aleatório e inútil.</p>
+    <button onclick="novoConselho()">Me dá um conselho!</button>
+  </div>
+
+  <script>
+    const conselhos = [
+  "Se a vida te der limões, jogue de volta e peça pizza.",
+  "Nunca confie em alguém que diz 'confia em mim'.",
+  "Trabalhe duro... mas só se alguém estiver olhando.",
+  "A grama do vizinho é mais verde porque é artificial.",
+  "Faça hoje o que você pode adiar até amanhã.",
+  "A motivação do dia: finja até dar certo. Ou até alguém perceber.",
+  "A vida é curta. Coma a sobremesa primeiro.",
+  "Se não puder convencê-los, confunda-os.",
+  "Pare de procrastinar. Amanhã você tenta de novo.",
+  "Sorria. Isso confunde as pessoas.",
+  "Nunca confie em uma pessoa que diz 'vou ser breve'.",
+  "A melhor forma de parecer ocupado é abrir muitas abas no navegador.",
+  "Se for pra correr atrás, que seja de um food truck.",
+  "Não deixe pra amanhã o que você pode ignorar hoje.",
+  "Com grandes boletos, vêm grandes responsabilidades.",
+  "Não se preocupe com o futuro. O cartão de crédito já faz isso por você.",
+  "Dormir não resolve os problemas, mas adia todos com estilo.",
+  "Sempre leia os termos de uso. Mentira, ninguém faz isso.",
+  "Chuva é uma desculpa legítima para não sair da cama.",
+  "Não peça conselho pra quem te incentiva a mandar mensagem pro ex.",
+  "Trabalhe com algo que ama e nunca mais vai amar nada.",
+  "Seja você mesmo. A não ser que você possa ser o Batman.",
+  "Comer sem culpa emagrece a alma.",
+  "Tente. Falhe. Tente de novo. Desista com elegância.",
+  "As calorias do fim de semana não contam. É feriado gastronômico.",
+  "Se algo está difícil, é porque você está no caminho certo… ou fazendo errado.",
+  "Foco, força e fé. Mas se não der, vai de pizza.",
+  "Tenha sempre um plano B. E um pote de sorvete.",
+  "Não existe tempo ruim, existe guarda-chuva esquecido.",
+  "Acorde com determinação. Volte a dormir com arrependimento.",
+  "Você é único. Igual todo mundo.",
+  "Se o plano não funcionar, mude de plano. Não de sonho. Ou mude tudo. Sei lá.",
+  "Seja a razão do sorriso de alguém. Ou da risada constrangida.",
+  "A grama do vizinho é mais verde porque tem filtro.",
+  "Se a vergonha matasse, a gente vivia ressuscitando.",
+  "Exercício faz bem. Mas sofá também nunca me fez mal.",
+  "Levante-se com coragem. Ou porque o café ficou pronto.",
+  "O silêncio é de ouro, mas a zoeira é de platina.",
+  "Nunca subestime o poder de uma soneca.",
+  "Uma mente preguiçosa é um corpo descansado.",
+  "Não leve a vida tão a sério. Ela não vai sair viva mesmo.",
+  "Cansado? Tome um banho. Continua cansado? Normal.",
+  "Seus problemas não tiram férias. Mas você pode fingir que tirou.",
+  "A vida é feita de escolhas. E todas envolvem comida.",
+  "Dê o seu melhor. E se não der, finja que deu.",
+  "Segundas-feiras foram um erro da Matrix.",
+  "Dinheiro não traz felicidade, mas ajuda a pagar o delivery.",
+  "Às vezes, tudo o que a gente precisa é fingir que sabe o que está fazendo.",
+  "Você não está atrasado. Está no seu tempo cósmico desorganizado.",
+  "Nunca discuta com gente teimosa. Perca em paz.",
+  "A esperança é a última que morre. Depois dela, só a bateria do celular.",
+  "Cuidado com quem te chama de 'amigo'. Pode estar querendo te pedir um favor.",
+  "O melhor exercício é dar risada. E mastigar.",
+  "Aprenda a rir de si mesmo. Economiza terapia.",
+  "Se nada der certo, invente uma desculpa criativa.",
+  "O mundo é dos espertos. Mas os preguiçosos vivem mais.",
+  "Uma boa noite de sono resolve tudo. Inclusive o dia.",
+  "Não tome decisões com fome. Nem de estômago vazio.",
+  "Faça o que ama. Ou faça o que dá pra pagar o boleto."
+];
+
+
+    function novoConselho() {
+      const aleatorio = Math.floor(Math.random() * conselhos.length);
+      document.getElementById("conselho").textContent = conselhos[aleatorio];
+    }
+  </script>
 </body>
 </html>
